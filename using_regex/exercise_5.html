@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Using Regular Expressions: JavaScript</title>
+  </head>
+  <body>
+    <h1>Using Regular Expressions: JavaScript - Exercise 5</h1>
+    <p>Write a method that changes the first occurrence of the word apple, blueberry, or cherry in a string to danish.</p>
+<script>
+function danish(str) {
+  return str.replace(/\b(apple|blueberry|cherry)\b/, 'danish');
+}
+
+var test1 = danish('An apple a day keeps the doctor away');
+// -> 'An danish a day keeps the doctor away'
+
+var test2 = danish('My favorite is blueberry pie');
+// -> 'My favorite is danish pie'
+
+var test3 = danish('The cherry of my eye');
+// -> 'The danish of my eye'
+
+var test4 = danish('apple. cherry. blueberry.');
+// -> 'danish. cherry. blueberry.'
+
+var test5 = danish('I love pineapple');
+// -> 'I love pineapple'
+
+console.log(test1);
+console.log(test2);
+console.log(test3);
+console.log(test4);
+console.log(test5);
+</script>
+  </body>
+</html>

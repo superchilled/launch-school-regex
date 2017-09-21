@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Using Regular Expressions: JavaScript</title>
+  </head>
+  <body>
+    <h1>Using Regular Expressions: JavaScript - Exercise 1</h1>
+    <p>Write a method that returns true if its argument looks like a URL, false if it does not.</p>
+<script>
+function isUrl(str) {
+  return !!str.match(/^https?:\/\/.*\.\w*\b$/)
+}
+
+var test1 = isUrl('http://launchschool.com');   // -> true
+var test2 = isUrl('https://example.com');       // -> true
+var test3 = isUrl('https://example.com hello'); // -> false
+var test4 = isUrl('   https://example.com');    // -> false
+
+console.log(test1);
+console.log(test2);
+console.log(test3);
+console.log(test4);
+</script>
+  </body>
+</html>

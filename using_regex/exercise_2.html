@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Using Regular Expressions: JavaScript</title>
+  </head>
+  <body>
+    <h1>Using Regular Expressions: JavaScript - Exercise 2</h1>
+    <p>Write a method that returns all of the fields in a haphazardly formatted string. The fields are separated by a variety of spaces, tabs, and commas, with possibly multiple occurrences of these characters.</p>
+<script>
+function fields(str) {
+  return str.split(/[ \t,]+/);
+}
+
+var test1 = fields("Pete,201,Student");
+// -> ['Pete', '201', 'Student']
+
+var test2 = fields("Pete \t 201    ,  TA");
+// -> ['Pete', '201', 'TA']
+
+var test3 = fields("Pete \t 201");
+// -> ['Pete', '201']
+
+console.log(test1);
+console.log(test2);
+console.log(test3);
+</script>
+  </body>
+</html>

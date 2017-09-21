@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Using Regular Expressions: JavaScript</title>
+  </head>
+  <body>
+    <h1>Using Regular Expressions: JavaScript - Exercise 7</h1>
+    <p>Challenge: write a method that changes dates in the format 2016-06-17 or 2016/06/17 to the format 17.06.2016. You must use a regular expression and should only use methods described in this section.</p>
+<script>
+function format_date(str) {
+  return str.replace(/(^\d{4})(-|\/)(\d{2})\2(\d{2}$)/, '$4.$3.$1');
+}
+
+var test1 = format_date('2016-06-17'); // -> '17.06.2016'
+var test2 = format_date('2017/05/03'); // -> '03.05.2017'
+var test3 = format_date('2015/01-31'); // -> '2015/01-31' (no change)
+
+
+console.log(test1);
+console.log(test2);
+console.log(test3);
+</script>
+  </body>
+</html>
